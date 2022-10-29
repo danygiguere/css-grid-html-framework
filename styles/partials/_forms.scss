@@ -1,0 +1,121 @@
+input[type="text"], input[type="password"], input[type="email"], input[type="number"], select, textarea, .input-like {
+    font-family: 'Open Sans', arial, sans-serif;
+    font-size: 16px !important;
+    line-height: 1;
+    color: #000;
+    background-color: #FFF;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    min-height: 2.8rem;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: none;
+    height: auto;
+    padding: 1rem .8rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    -webkit-appearance: none;
+}
+
+select {
+    border: var(--border-width) solid var(--border-color);
+    padding: .5rem 1rem;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - .7rem);
+    background-position-y: center;
+}
+
+#SelectIcon {
+    background-color: blue;
+    color: red;
+    stroke: blue;
+    fill: red;
+}
+
+.input-like {
+    background-color: #e6e6e6;
+}
+
+textarea {
+    resize: vertical;
+    color: #000;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: .8rem;
+}
+
+input, select, textarea {
+    &::placeholder {
+        color: #515151;
+        font-size: 0.95rem;
+        font-weight: 100;
+        font-style: italic;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+label {
+    cursor: pointer;
+}
+
+label, .label-like {
+    line-height: 1.3rem;
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+button, input[type=submit], .button, .submit {
+    display: inline-block;
+    padding: 1rem 1.2rem;
+    border-radius: 1.6rem;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    -webkit-appearance: none;
+    font-size: 1rem;
+    line-height: 1;
+    text-decoration: none;
+    font-family: Moranga, sans-serif;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    a {
+        color: #fff;
+
+        &:hover {
+            color: #fff;
+            opacity: 0.8;
+        }
+    }
+
+    &.red {
+        background-color: var(--secondary-color);
+    }
+
+    &.blue {
+        background-color: var(--primary-color);
+    }
+}
+
+input, select, textarea, button {
+    &[disabled] {
+        background-color: #f1efef;
+        color: #656565;
+        cursor: default;
+    }
+}

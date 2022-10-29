@@ -1,0 +1,30 @@
+$size-xs: 480px;
+$size-sm: 768px;
+$size-md: 992px;
+$size-lg: 1200px;
+
+// The variables below can be use everywhere the htlm tag is present, even in child components (such as react or vue.js components)
+:root {
+    --size-xs: #{$size-xs};
+    --size-sm-container: calc(#{$size-sm} - 18px);
+    --size-sm: #{$size-sm};
+    --size-md-container: calc(#{$size-md} - 12px);
+    --size-md: #{$size-md};
+    --size-lg-container: calc(#{$size-lg} - 30px);
+    --size-lg: #{$size-lg};
+
+    --gutter: 1rem;
+
+    --light: #f6f6f6;
+    --gray: #e8e8e8;
+    --dark: #252525;
+    --primary-color: #0077ff;
+    --secondary-color: #f04646;
+
+    --border-width: 1px;
+    --border-color: #dbdbdb;
+    --border-radius: 10px;
+
+    --nav-height: 57.19px;
+    --footer-height: 88px;
+}

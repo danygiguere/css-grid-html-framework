@@ -1,0 +1,33 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.container {
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: $size-sm) {
+    .container {
+        width: var(--size-sm-container);
+    }
+}
+
+@media (min-width: $size-md) {
+    .container {
+        width: var(--size-md-container);
+    }
+}
+
+@media (min-width: $size-lg) {
+    .container {
+        width: var(--size-lg-container);
+    }
+}

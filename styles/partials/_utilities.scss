@@ -1,0 +1,304 @@
+.img-responsive {
+    width: 100%;
+    height: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.semi-bold {
+    font-weight: 600;
+}
+
+.relative {
+    position: relative;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.break-all {
+    word-break: break-all;
+}
+
+.scroll {
+    width: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.overflow-y-hidden {
+    overflow-y: hidden;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+.center-hv {
+    display: grid;
+    place-items: center;
+}
+
+.center-hv-flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-hv-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.grid-space-between {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    justify-content: space-around;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.center-horizontal, .center-hz {
+    display: grid;
+    justify-items: center;
+}
+
+.center-horizontal-flexbox, .center-hz-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.center-vertical, .center-vt {
+    display: grid;
+    align-items: center;
+}
+
+.center-vertical-flexbox, .center-vt-flex {
+    display: flex;
+    align-items: center;
+}
+
+.grid-start {
+    grid-area: grid-start;
+    place-content: center start;
+}
+
+.grid-end {
+    grid-area: grid-end;
+    place-content: center end;
+}
+
+.left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.padding {
+    padding: var(--gutter);
+}
+
+.padding-vertical, .p-vt {
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
+}
+
+.padding-horizontal, .p-hz {
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+}
+
+.padding-top, .p-t {
+    padding-top: var(--gutter);
+}
+
+.padding-bottom, .p-b {
+    padding-bottom: var(--gutter);
+}
+
+.padding-left, .p-l {
+    padding-left: var(--gutter);
+}
+
+.padding-right, .p-r {
+    padding-right: var(--gutter);
+}
+
+.margin-vertical, .m-vt {
+    margin-top: var(--gutter);
+    margin-bottom: var(--gutter);
+}
+
+.margin-horizontal, .m-hz {
+    margin-left: var(--gutter);
+    margin-right: var(--gutter);
+}
+
+.margin-top, .m-t {
+    margin-top: var(--gutter);
+}
+
+.margin-top-medium, .m-t-m {
+    margin-top: calc(var(--gutter) * 2);
+}
+
+.margin-top-large, .m-t-l {
+    margin-top: calc(var(--gutter) * 3.5);
+}
+
+.margin-bottom, .m-b {
+    margin-bottom: var(--gutter);
+}
+
+.margin-left, .m-l {
+    margin-left: var(--gutter);
+}
+
+.margin-right, .m-r {
+    margin-right: var(--gutter);
+}
+
+.no-margin {
+    margin: 0;
+}
+
+@media (max-width: $size-sm) {
+    .hidden-xs {
+        display: none;
+    }
+}
+
+@media (min-width: $size-sm) and (max-width: $size-md - 1px) {
+    .hidden-sm {
+        display: none;
+    }
+}
+
+@media (min-width: $size-md) and (max-width: $size-lg - 1px) {
+    .hidden-md {
+        display: none;
+    }
+}
+
+@media (min-width: $size-lg) {
+    .hidden-lg {
+        display: none;
+    }
+}
+
+.error {
+    color: red;
+}
+
+.warning {
+    color: yellow;
+}
+
+.success {
+    color: green;
+}
+
+.fade-in-out {
+    opacity: 0;
+    transition: opacity 1400ms ease-in-out 200ms;
+
+    &.in-view {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1400ms ease-in-out 200ms;
+
+    &.in-view {
+        opacity: 1;
+    }
+}
+
+@keyframes visually-hidden {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.visually-hidden {
+    animation: visually-hidden 300ms linear;
+}

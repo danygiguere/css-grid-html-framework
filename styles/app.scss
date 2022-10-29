@@ -1,0 +1,114 @@
+@import 'partials/reset';
+@import 'partials/variables';
+@import 'partials/foundation';
+@import 'partials/utilities';
+@import 'partials/forms';
+@import 'partials/tables';
+@import 'partials/nav';
+@import 'partials/grids';
+@import 'partials/split';
+
+body {
+    font-family: "Circular Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: normal;
+    line-height: 1.5;
+    font-feature-settings: "liga", "kern";
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        color: var(--primary-color);
+    }
+}
+
+section {
+    padding-top: calc(var(--gutter) * 3.5);
+    padding-bottom: calc(var(--gutter) * 3.5);
+
+    &:first-of-type {
+        padding-top: calc((var(--gutter) * 3.5) + var(--nav-height)); //to compensate for the fixed menu
+    }
+
+    &:only-of-type {
+        min-height: calc(100vh - var(--footer-height)); //to compensate for the footer
+    }
+}
+
+footer {
+    padding-top: calc(var(--gutter) * 2);
+    padding-bottom: calc(var(--gutter) * 2);
+}
+
+.light-background {
+    background-color: var(--light);
+}
+
+.gray-background {
+    background-color: var(--gray);
+}
+
+.dark-background {
+    background-color: var(--dark);
+    color: #fff;
+}
+
+.title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding-bottom: calc(var(--gutter) * 0.6);
+}
+
+.justified {
+    text-align: justify;
+}
+
+.slider {
+    position: relative;
+    display: inline-flex;
+}
+
+.logos {
+    white-space: nowrap;
+    overflow: hidden;
+    width: max-content;
+
+    img {
+        padding: 1rem 2rem;
+        max-width: 155px;
+        filter: brightness(0) invert(1); // white
+        &:hover {
+            //filter: contrast(1%) grayscale(100%); //gray
+            filter: none;
+        }
+    }
+}
+
+.boxed {
+    padding: 1rem;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--gray);
+}
+
+
+#login-form, #register-form {
+    max-width: 400px;
+    width: 100%;
+}
+
+@media (min-width: $size-sm) {
+
+}
+
+@media (min-width: $size-md) {
+
+}
+
+@media (min-width: $size-lg) {
+
+}

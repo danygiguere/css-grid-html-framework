@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Framework</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto&display=swap" rel="stylesheet">
+    <script src="./app.js" defer></script>
+    <link href="./styles/app.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="menu">
+            <!--            https://www.flaticon.com/free-icon/shop_513893-->
+            <div class="logo">
+                <a href="./index.html"><img src="./logo.svg" alt=""></a>
+            </div>
+            <div class="links">
+                <ul class="">
+                    <li><a href="first.html">First link</a></li>
+                    <li class="dropdown"><span>Second link</span>
+                        <ul>
+                            <li><a href="#!">Second link (A)</a></li>
+                            <li><a href="#!">Second link (B)</a></li>
+                            <li><a href="#!">Second link (C)</a></li>
+                            <li><a href="#!">Second link (E)</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><span>Third link</span>
+                        <ul>
+                            <li><a href="./login.html">Login</a></li>
+                            <li><a href="./register.html">Register</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#!">Other link</a></li>
+                </ul>
+            </div>
+            <div class="menu-button">
+                <div class="bars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<section class="light-background">
+    <div class="container">
+        <h2 class="title text-center">Login</h2>
+        <div class="center-hz">
+            <form action="" id="login-form">
+                <div>
+                    <label for="">Username</label>
+                    <input type="text">
+                </div>
+                <div class="margin-top">
+                    <label for="">Password</label>
+                    <input type="text">
+                </div>
+                <div class="margin-top right">
+                    <button>Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<footer class="dark-background">
+    <div class="container">
+        <p>&copy; Info</p>
+    </div>
+</footer>
+</body>
+</html>

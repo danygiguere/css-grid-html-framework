@@ -1,0 +1,75 @@
+$first-fraction: 2/3;
+.split-sections {
+    padding-top: 0;
+    padding-bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+}
+
+.split-section {
+    display: grid;
+    padding-top:  calc(var(--gutter) * 3.5);
+    padding-bottom:  calc(var(--gutter) * 3.5);
+}
+
+.split-container {
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+}
+
+@media (min-width: $size-sm) {
+    .split-sections {
+        grid-template-columns: 1fr;
+    }
+    .split-section:nth-child(1n) {
+        .split-container {
+            width: calc(var(--size-sm-container));
+            justify-self: center;
+        }
+    }
+    .split-section:nth-child(2n) {
+        .split-container {
+            width: calc(var(--size-sm-container));
+            justify-self: center;
+        }
+    }
+}
+
+@media (min-width: $size-md) {
+    .split-sections {
+        grid-template-columns: calc(((100vw - var(--size-md-container)) / 2) + (var(--size-md-container) * #{$first-fraction})) calc(((100vw - var(--size-md-container)) / 2) + (var(--size-md-container) * (1 - #{$first-fraction})));
+    }
+    .split-section:nth-child(1n) {
+        justify-items: end;
+
+        .split-container {
+            width: calc(var(--size-md-container) * #{$first-fraction});
+            justify-self: unset;
+        }
+    }
+    .split-section:nth-child(2n) {
+        justify-items: start;
+
+        .split-container {
+            width: calc(var(--size-md-container) * (1 - #{$first-fraction}));
+            justify-self: unset;
+        }
+    }
+}
+
+@media (min-width: $size-lg) {
+    .split-sections {
+        grid-template-columns: calc(((100vw - var(--size-lg-container)) / 2) + (var(--size-lg-container) * #{$first-fraction})) calc(((100vw - var(--size-lg-container)) / 2) + (var(--size-lg-container) * (1 - #{$first-fraction})));
+    }
+    .split-section:nth-child(1n) {
+        .split-container {
+            width: calc(var(--size-lg-container) * #{$first-fraction});
+        }
+    }
+    .split-section:nth-child(2n) {
+        .split-container {
+            width: calc(var(--size-lg-container) * (1 - #{$first-fraction}));
+        }
+    }
+}
